@@ -3,47 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>JESYS Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="cargarSeccion('inicio.html')">Inicio</a></li>
+            <li><a href="#" onclick="cargarSeccion('sobre-nosotros.html')">Sobre Nosotros</a></li>
+            <li><a href="#" onclick="cargarSeccion('servicios.html')">Servicios</a></li>
+            <li><a href="#" onclick="cargarSeccion('contacto.html')">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <!-- Inicio -->
-    <div id="inicio">
-        <!-- Aquí incluimos el contenido de inicio.html -->
-        <script>
-            fetch('sections/01_start.html')
-                .then(response => response.text())
-                .then(html => document.getElementById('inicio').innerHTML = html);
-        </script>
-    </div>
+    <!-- Contenedor de contenido dinámico -->
+    <main id="contenido"></main>
 
-    <!-- Sobre Nosotros -->
-    <div id="sobre-nosotros">
-        <script>
-            fetch('sections/02_about-us.html')
-                .then(response => response.text())
-                .then(html => document.getElementById('sobre-nosotros').innerHTML = html);
-        </script>
-    </div>
-
-    <!-- Servicios -->
-    <div id="servicios">
-        <script>
-            fetch('sections/03_service.html')
-                .then(response => response.text())
-                .then(html => document.getElementById('servicios').innerHTML = html);
-        </script>
-    </div>
-
-    <!-- Contacto -->
-    <div id="contacto">
-        <script>
-            fetch('sections/04_contact.html')
-                .then(response => response.text())
-                .then(html => document.getElementById('contacto').innerHTML = html);
-        </script>
-    </div>
-
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
