@@ -1,9 +1,7 @@
 function cargarSeccion(archivo) {
     fetch(`secciones/${archivo}`)
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar la sección');
-            }
+            if (!response.ok) throw new Error('Error al cargar la sección');
             return response.text();
         })
         .then(data => {

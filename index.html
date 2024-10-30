@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JESYS Solutions</title>
+    <title>Jesys Solutions</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navegación -->
-    <nav>
-        <ul>
-            <li><a href="#" onclick="cargarSeccion('inicio.html')">Inicio</a></li>
-            <li><a href="#" onclick="cargarSeccion('sobre-nosotros.html')">Sobre Nosotros</a></li>
-            <li><a href="#" onclick="cargarSeccion('servicios.html')">Servicios</a></li>
-            <li><a href="#" onclick="cargarSeccion('contacto.html')">Contacto</a></li>
-        </ul>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="Jesys Solutions Logo" class="logo">
+                <span class="company-name">Jesys Solutions</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link" onclick="cargarSeccion('inicio.html')">Inicio</a></li>
+                <li><a href="#" class="nav-link" onclick="cargarSeccion('nosotros.html')">Nosotros</a></li>
+                <li><a href="#" class="nav-link" onclick="cargarSeccion('servicios.html')">Servicios</a></li>
+                <li><a href="#" class="nav-link" onclick="cargarSeccion('contacto.html')">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Contenedor de contenido dinámico -->
-    <main id="contenido"></main>
+    <main class="container" id="contenido">
+        <!-- El contenido de cada sección se cargará aquí -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jesys Solutions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
