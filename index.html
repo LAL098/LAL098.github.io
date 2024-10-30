@@ -12,7 +12,7 @@
     <div id="inicio">
         <!-- Aquí incluimos el contenido de inicio.html -->
         <script>
-            fetch('inicio.html')
+            fetch('sections/01_start.html')
                 .then(response => response.text())
                 .then(html => document.getElementById('inicio').innerHTML = html);
         </script>
@@ -21,7 +21,7 @@
     <!-- Sobre Nosotros -->
     <div id="sobre-nosotros">
         <script>
-            fetch('sobre-nosotros.html')
+            fetch('sections/02_about-us.html')
                 .then(response => response.text())
                 .then(html => document.getElementById('sobre-nosotros').innerHTML = html);
         </script>
@@ -30,7 +30,7 @@
     <!-- Servicios -->
     <div id="servicios">
         <script>
-            fetch('servicios.html')
+            fetch('sections/03_service.html')
                 .then(response => response.text())
                 .then(html => document.getElementById('servicios').innerHTML = html);
         </script>
@@ -39,7 +39,7 @@
     <!-- Contacto -->
     <div id="contacto">
         <script>
-            fetch('contacto.html')
+            fetch('sections/04_contact.html')
                 .then(response => response.text())
                 .then(html => document.getElementById('contacto').innerHTML = html);
         </script>
