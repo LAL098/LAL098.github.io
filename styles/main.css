@@ -62,6 +62,7 @@ body {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -120,10 +121,9 @@ body {
 }
 
 .button-container {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
+  display: flex; /* Usa flexbox para el contenedor */
+  justify-content: center; /* Centra horizontalmente */
+  margin-top: 1rem; /* Espacio superior opcional */
 }
 
 .btn {
@@ -160,4 +160,78 @@ body {
   .square {
       padding: 1rem;
   }
+}
+
+/* Botones para redes. */
+.button-group {
+  display: flex;
+  gap: 20%;
+  margin-top: 30px; /* Ajusta el valor según el espacio deseado */
+}
+
+.button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  color: #212121;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 150px;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.button:hover {
+  color: #e8e8e8;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+/* Carta de presentacion */
+ .contact-card {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  font-family: Arial, sans-serif;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 0.3rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: #4b5563;
 }

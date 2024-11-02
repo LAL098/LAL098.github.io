@@ -1,5 +1,5 @@
 // Array de páginas para mantener el historial
-const pages = ['index.html', 'sections/nosotros.html', 'sections/servicios.html', "sections/contacto.html"];
+const pages = ['index.html', 'nosotros.html', 'servicios.html', "contacto.html"];
 let currentPageIndex = 0;
 
 // Obtener el índice de la página actual
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (startButton) {
         startButton.addEventListener('click', (e) => {
             e.preventDefault();
-            loadPage('sections/nosotros.html');
+            loadPage('nosotros.html');
         });
     }
     
