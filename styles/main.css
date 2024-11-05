@@ -59,7 +59,7 @@ body {
 }
 
 .content h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -67,9 +67,23 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.container p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #fff;
+}
+
 .squares-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.rectangle-container {
+  display: grid;
+  grid-template-columns: auto;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -118,16 +132,17 @@ body {
   color: #e0e0e0;
   font-size: 0.95rem;
   line-height: 1.4;
+  margin: 1px 0;
 }
 
 .button-container {
-  display: flex; /* Usa flexbox para el contenedor */
+  display: space-around; /* Usa flexbox para el contenedor */
   justify-content: center; /* Centra horizontalmente */
   margin-top: 1rem; /* Espacio superior opcional */
 }
 
 .btn {
-  display: inline-block;
+  display: initial;
   padding: 12px 24px;
   background: linear-gradient(45deg, #6366f1, #8b5cf6);
   color: white;
@@ -214,24 +229,72 @@ body {
   height: 20px;
   fill: currentColor;
 }
+
 /* Carta de presentacion */
- .contact-card {
-  background-color: white;
-  padding: 4rem;
+
+.container-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-card .glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
   border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container-card:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+.container-card .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: justify;
-  font-family: Arial, sans-serif;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container-card .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
 }
 
-.contact-info h2 {
-  font-size: 1.8rem;
-  color: #1f2937;
-  margin-bottom: 0.3rem;
+.custom-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.contact-info p {
-  font-size: 1.2rem;
-  color: #4b5563;
+.custom-image {
+  width: 200px;      /* Ancho de la imagen */
+  height: 200px;      /* Ajuste automático de la altura */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor */
+  margin: 20px;      /* Espacio alrededor */
+  transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.custom-image:hover {
+  transform: scale(1.05);
 }
